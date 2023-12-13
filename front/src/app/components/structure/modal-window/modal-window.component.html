@@ -1,0 +1,71 @@
+<!-- The Modal -->
+<div id="myModal" class="modal" #modal>
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h1 class="page-header">Add new location</h1>
+    <div class="form-container">
+
+      <input id='step2' type='checkbox'>
+      <input id='step3' type='checkbox'>
+
+      <div id="part1" class="form-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Enter density of field</h3>
+          </div>
+          <input type="number" id="name" class="form-control" placeholder="Density" aria-describedby="sizing-addon1"
+                 #density>
+          <div class="btn-group btn-group-lg" role="group" aria-label="...">
+            <label for='step2' id="continue-step2" class="continue">
+              <div class="btn btn-default btn-success btn-lg" (click)="saveField(density.value)">Continue</div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="part2" class="form-group" *ngIf="mapComponent.currentFieldId">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Part 2</h3>
+            </div>
+            <input type="text" id="email" class="form-control" placeholder="Name" #name>
+            <input type="text" id="phone" class="form-control" placeholder="City" #city>
+            <div class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="...">
+
+              <label for='step3' id="continue-step3" class="continue">
+                <div class="btn btn-default btn-success btn-lg" role="button" (click)="saveInfo(name.value, city.value)">Continue</div>
+              </label>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="part3" class="form-group">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Part 3</h3>
+            </div>
+            <textarea id="message" class="form-control" placeholder="Description" #description></textarea>
+            <div class="btn-group btn-group-lg" role="group" aria-label="...">
+              <label for='step3' id="back-step3" class="back">
+                <div class="btn btn-default btn-primary btn-lg">Back</div>
+              </label>
+              <label class="continue">
+                <button type="submit" class="btn btn-default btn-success btn-lg" (click)="saveLocation( description.value )">
+                  Submit
+                </button>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+

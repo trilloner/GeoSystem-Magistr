@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="wrapper">
+  <div class="card">
+    <h2>Registration</h2>
+
+    <form action="" [formGroup]="registerForm" method="post" (ngSubmit)="register()">
+      <div class="input-border">
+        <input formControlName="name" type="text" class="text" required>
+        <label>Name</label>
+        <div class="border"></div>
+      </div>
+      <div class="input-border">
+        <input formControlName="email" type="email" class="text" required>
+        <label>Email</label>
+        <div class="border"></div>
+      </div>
+
+      <div class="input-border">
+        <input formControlName="password" type="password" class="text" required>
+        <label>Password</label>
+        <div class="border"></div>
+      </div>
+
+      <input href="#" type="submit" class="btn" value="Register">
+    </form>
+    <div>
+      <span> Already register?</span> <a href="/login">Login</a>
+    </div>
+
+  </div>
+
+
+</div>

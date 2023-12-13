@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="wrapper">
+  <div class="card">
+    <h2>Log-In Account</h2>
+
+    <form action="" [formGroup]="loginForm" method="post" (ngSubmit)="login()">
+      <div class="input-border">
+        <input formControlName="username" type="text" class="text" required>
+        <label>Name</label>
+        <div class="border"></div>
+      </div>
+
+      <div class="input-border">
+        <input formControlName="password" type="password" class="text" required>
+        <label>Password</label>
+        <div class="border"></div>
+      </div>
+
+      <input href="#" type="submit" class="btn" value="Log In">
+    </form>
+
+  </div>
+
+
+</div>

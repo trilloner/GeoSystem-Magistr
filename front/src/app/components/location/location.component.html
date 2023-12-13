@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <div class="locations">
+    <h1>Locations:</h1>
+    <div class="fab" (click)="sayHi()"> +</div>
+  </div>
+  <div class="cols">
+    <div class="col" ontouchstart="this.classList.toggle('hover');" *ngFor="let location of locations " (click)="openModal(location.id)">
+      <div class="container">
+        <div class="front">
+          <div class="inner">
+            <p>{{location.name}}</p>
+            <span>{{location.city}}</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <p>{{location.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="myModal" class="modal" #modal>
+
+    <!-- Modal content -->
+    <div class="modal-content" *ngIf="selectedLocation">
+
+
+      <!-- Start Box Card -->
+      <div class="box-card">
+        <!-- Start Head -->
+        <div class="head">
+          <span class="close" (click)="closeModal()">&times;</span>
+          <div class="img-box">
+            <a href="#"><img src="./assets/download.jpg" alt="sayed picture"></a>
+          </div>
+          <div class="info-box">
+            <h1>{{selectedLocation.name}}</h1>
+            <p>web developer</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- End Head -->
+        <!-- Start Content -->
+        <div class="content">
+          <div class="text-box">
+            <h2>About <span>Location</span></h2>
+            <p>{{selectedLocation.description}}</p>
+            <a href="#">download resume</a>
+          </div>
+          <div class="info-box">
+            <ul>
+              <li><span class="title">Id:</span><span class="value">{{selectedLocation.id}}</span></li>
+              <li><span class="title">Name:</span><span class="value">{{selectedLocation.name}}</span></li>
+              <li><span class="title">City:</span><span class="value">{{selectedLocation.city}}</span></li>
+              <li><span class="title">Date:</span><span class="value">{{selectedLocation.date}}</span></li>
+              <li><span class="title">Density</span><span class="value"><a href="#"></a></span></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- End Content -->
+      </div>
+      <!-- End Box Card -->
+    </div>
+  </div>
+
+
+</div>

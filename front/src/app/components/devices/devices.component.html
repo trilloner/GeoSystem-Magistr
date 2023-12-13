@@ -1,0 +1,99 @@
+<header class="header-login-signup">
+
+  <div class="header-limiter">
+
+    <h1><a href="/home">Geo<span>system</span></a></h1>
+
+    <nav>
+
+    </nav>
+
+    <ul>
+      <li><a routerLink="/devices">Devices</a></li>
+      <li><a routerLink="/cabinet">Profile</a></li>
+      <!--      <li><a routerLink="/cabinet">Profile</a></li>-->
+
+
+    </ul>
+
+  </div>
+
+</header>
+<div class="wrapper">
+
+
+  <!--  <div class="listsSeparate">-->
+
+  <!--    <div class="pageWrapper space">-->
+  <!--      <h1>Devices:</h1>-->
+  <!--      <ul class="heroes">-->
+  <!--        <li *ngFor="let device of devices">-->
+  <!--          &lt;!&ndash;          <a>&ndash;&gt;-->
+  <!--          &lt;!&ndash;            <span class="badge">{{device.id}}</span> {{device.serialCode}}&ndash;&gt;-->
+  <!--          &lt;!&ndash;          </a>&ndash;&gt;-->
+  <!--          <label for="lok"> {{device.serialCode}}</label>-->
+  <!--          <input type="radio" id="lok" name="device" value="{{device.id}}">-->
+  <!--        </li>-->
+  <!--      </ul>-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--  <span>=></span>-->
+
+  <!--  <section class="container">-->
+  <!--    <form method="post" action="" (ngSubmit)="onUpload()">-->
+  <!--      <input type="file" (change)="handleFileInput($event.target.files)">-->
+  <!--      <button type="submit"> Parse file</button>-->
+  <!--    </form>-->
+  <!--  </section>-->
+  <form method="post" action="" (ngSubmit)="onUpload()">
+    <div class="first-block">
+      <section class="light">
+
+        <div *ngFor="let device of devices">
+          <label for="{{device.id}}">
+            <input type="radio" name="light" id="{{device.id}}">
+            <span class="design"></span>
+            <span class="text">{{device.serialCode}}</span>
+          </label>
+        </div>
+
+
+        <label>
+          <input type="radio" name="light">
+          <span class="design"></span>
+          <span class="text">Option 2</span>
+        </label>
+
+        <label>
+          <input type="radio" name="light">
+          <span class="design"></span>
+          <span class="text">Option 3</span>
+        </label>
+        <label>
+          <input type="radio" name="light">
+          <span class="design"></span>
+          <span class="text">Option 4</span>
+        </label>
+        <label>
+          <input type="radio" name="light">
+          <span class="design"></span>
+          <span class="text">Option 5</span>
+        </label>
+        <label>
+          <input type="radio" name="light">
+          <span class="design"></span>
+          <span class="text">Option 6</span>
+        </label>
+      </section>
+
+    </div>
+    <div class="second-block" style="display:none;">
+      <input type="file" name="file" id="file" class="inputfile" (change)="handleFileInput($event.target.files)"/>
+      <label for="file">Choose a file</label>
+    </div>
+    <div class="third-block" style="display:none;">
+      <button type="submit" class="btnfos btnfos-5"> Parse file</button>
+    </div>
+  </form>
+</div>

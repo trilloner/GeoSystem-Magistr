@@ -1,0 +1,54 @@
+<header class="header-login-signup">
+
+  <div class="header-limiter">
+
+    <h1><a href="/home">Geo<span>system</span></a></h1>
+
+    <nav>
+
+    </nav>
+
+    <ul>
+      <li><a routerLink="/devices">Devices</a></li>
+      <li><a routerLink="/cabinet">Profile</a></li>
+      <!--      <li><a routerLink="/cabinet">Profile</a></li>-->
+
+
+    </ul>
+
+  </div>
+
+</header>
+<div class="profile-header">
+  <!-- Begin content header -->
+  <section class="my-app__header">
+    <div class="container">
+      <div class="my-app__header-inner">
+        <div class="my-app__header-text media">
+
+          <img width="82" height="82"
+               src="assets/no-avatar.png" style="margin-left: 25px"/>
+
+
+          <div class="media-body">
+            <h1 class="my-app__header-title">Hi there, {{currentUser.name}}!</h1>
+            <div class="my-input input-group mb-3">
+              <select class="my-select custom-select" id="inputGroupSelect01">
+                <option selected>Spend Your Money!</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="my-action-buttons my-app__header__buttons">
+          <button class="my-action-button" (click)="logout()">
+            <img class="my-action-button__icon" src="assets/loguser.png" alt>
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
